@@ -1,95 +1,33 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import type { Metadata } from 'next';
+import styles from './page.module.css';
 
+import { Noto_Sans } from 'next/font/google';
+const notoSans900 = Noto_Sans({ subsets: ['latin'], weight: '900' });
+const notoSans800 = Noto_Sans({ subsets: ['latin'], weight: '800' });
+const notoSans700 = Noto_Sans({ subsets: ['latin'], weight: '700' });
+const notoSans600 = Noto_Sans({ subsets: ['latin'], weight: '600' });
+const notoSans500 = Noto_Sans({ subsets: ['latin'], weight: '500' });
+const notoSans400 = Noto_Sans({ subsets: ['latin'], weight: '400' });
+const notoSans300 = Noto_Sans({ subsets: ['latin'], weight: '300' });
+const notoSans200 = Noto_Sans({ subsets: ['latin'], weight: '200' });
+const notoSans100 = Noto_Sans({ subsets: ['latin'], weight: '100' });
+
+export const metadata: Metadata = {
+	title: 'page',
+	description: 'Invatam next14',
+};
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+	return (
+		<main className={styles.main}>
+			<div className={notoSans900.className}>salut</div>
+			<div className={notoSans800.className}>salut</div>
+			<div className={notoSans700.className}>salut</div>
+			<div className={notoSans600.className}>salut</div>
+			<div className={notoSans500.className}>salut</div>
+			<div className={notoSans400.className}>salut</div>
+			<div className={notoSans300.className}>salut</div>
+			<div className={notoSans200.className}>salut</div>
+			<div className={notoSans100.className}>salut</div>
+		</main>
+	);
 }
