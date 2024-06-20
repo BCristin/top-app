@@ -56,7 +56,9 @@
 .card {
 	padding: 1rem 1.2rem;
 
-	transition: background 200ms, border 200ms;
+	transition:
+		background 200ms,
+		border 200ms;
 
 	border: 1px solid rgb(var(--card-border-rgb) 0);
 	border-radius: var(--border-radius);
@@ -120,7 +122,7 @@
 	position: absolute;
 	left: 50%;
 
-	content: "";
+	content: '';
 	transform: translateZ(0);
 	filter: blur(45px);
 }
@@ -205,12 +207,11 @@
 		border: none;
 		border-bottom: 1px solid rgb(var(--callout-border-rgb) 0.25);
 		border-radius: 0;
-		background:
-			linear-gradient(
-				to bottom,
-				rgb(var(--background-start-rgb) 1),
-				rgb(var(--callout-rgb) 0.5)
-			);
+		background: linear-gradient(
+			to bottom,
+			rgb(var(--background-start-rgb) 1),
+			rgb(var(--callout-rgb) 0.5)
+		);
 		background-clip: padding-box;
 		inset: 0 0 auto;
 		backdrop-filter: blur(24px);
@@ -226,12 +227,7 @@
 
 		pointer-events: none;
 
-		background:
-			linear-gradient(
-				to bottom,
-				transparent 0%,
-				rgb(var(--background-end-rgb)) 40%
-			);
+		background: linear-gradient(to bottom, transparent 0%, rgb(var(--background-end-rgb)) 40%);
 		inset: auto 0 0;
 	}
 }
@@ -261,4 +257,8 @@
 	to {
 		transform: rotate(0deg);
 	}
+}
+
+.test {
+	background-color: #fff;
 }

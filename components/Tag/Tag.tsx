@@ -20,7 +20,8 @@ export const Tag = ({
 				[styles.grey]: color == 'grey',
 				[styles.green]: color == 'green',
 				[styles.primary]: color == 'primary',
-			})}>
+			})}
+			{...props}>
 			{href ? <a href={href}>{children}</a> : <>{children}</>}
 		</div>
 	);

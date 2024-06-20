@@ -1,20 +1,17 @@
-import type { Metadata } from 'next';
+'use client';
+
 import styles from './page.module.css';
 
-import { Htag } from '@/components';
-import { Button } from '@/components/Button/Button';
-import { P } from '@/components/P/P';
-import { Tag } from '@/components/Tag/Tag';
+import { Button, Htag, P, Rating, Tag } from '@/components';
+import { Test } from '@/components/Test/Test';
 import { Noto_Sans } from 'next/font/google';
+import { useState } from 'react';
 const notoSans900 = Noto_Sans({ subsets: ['latin'], weight: '900' });
 
-export const metadata: Metadata = {
-	title: 'page',
-	description: 'Invatam next14',
-};
 export default function Home() {
+	const [rating, setRating] = useState<number>(4);
 	return (
-		<main className={styles}>
+		<main className={styles.test}>
 			<Htag tag="h1">Курсы по Photoshop </Htag>
 			<Button apperance="primary">Узнать подробнее</Button>
 			<Button apperance="ghost" arrow="down">
@@ -47,6 +44,8 @@ export default function Home() {
 			<Tag size="s" color="red">
 				small
 			</Tag>
+			<Test>as</Test>
+			<Rating rating={rating} isEditable setRating={setRating}></Rating>
 		</main>
 	);
 }
