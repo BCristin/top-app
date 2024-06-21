@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
-import './globals.css';
 
 const notoSans = Noto_Sans({ subsets: ['latin'] });
 
@@ -16,7 +15,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="ru">
-			<body className={notoSans.className}>{children}</body>
+			<body className={notoSans.className}>
+				<nav className="nav">
+					<p>dsa</p>
+				</nav>
+				{children}
+			</body>
 		</html>
 	);
 }
