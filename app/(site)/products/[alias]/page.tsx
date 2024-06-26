@@ -1,12 +1,26 @@
 // import cn from 'classnames';
 // import styles from './page.module.css';
 
+import { getMenu } from '@/api/menu';
+import { getPage } from '@/api/page';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-	title: 'Pagina',
+	title: 'Pagina produs',
 };
 
-export default function PageProduct({ params }: { params: { alias: string } }): JSX.Element {
+export async function generateStaticParams() {
+	const menu = await getMenu(0);
+
+	return menu.flatMap((item) => item.pages.map((page) => ({ alias: page.alias })));
+}
+
+export default async function PageProduct({ params }: { params: { alias: string } }) {
+	const page = await getPage(params.alias);
+	if (!page) {
+		notFound();
+	}
+
 	return <div>PageProduct {params.alias}</div>;
 }

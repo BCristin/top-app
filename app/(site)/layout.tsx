@@ -10,7 +10,7 @@ import styles from './layout.module.css';
 const notoSans = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'Layout',
+	title: 'Layout site',
 	description: 'Invatam next14',
 };
 
