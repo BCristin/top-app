@@ -1,33 +1,30 @@
+/* stylelint-disable string-quotes */
 :root {
-	--black: #3b434e;
-	--gray-light: #ebebeb;
-	--white: white;
-	--primary: #7653fc;
-	--primary-hover: #8d70ff;
-	--red: #fc836d;
-	--green: #1dc37e;
-	--green-light: #c8f8e4;
+   --black: #3b434e;
+   --gray-light: #ebebeb;
+   --white: white;
+   --primary: #7653fc;
+   --primary-hover: #8d70ff;
+   --red: #fc836d;
+   --green: #1dc37e;
+   --green-light: #c8f8e4;
 }
 
 * {
-	box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+   margin: 0;
+   padding: 0;
 
-	color: var(--black);
-	background: #f5f6f8;
+   color: var(--black);
+   background: #f5f6f8;
 }
 
 a {
-	text-decoration: none;
+   text-decoration: none;
 
-	color: inherit;
-}
-
-.red {
-	border: 3px solid rgb(17 0 255);
+   color: inherit;
 }

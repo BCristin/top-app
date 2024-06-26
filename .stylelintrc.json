@@ -2,7 +2,7 @@
 	"extends": ["stylelint-config-standard", "stylelint-order-config-standard"],
 	"plugins": ["stylelint-order"],
 	"rules": {
-		"indentation": "tab",
+		"indentation": 3,
 		"color-hex-case": "lower",
 		"selector-class-pattern": "^.*$",
 		"declaration-block-no-redundant-longhand-properties": [
