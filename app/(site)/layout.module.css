@@ -27,7 +27,7 @@
    grid-area: footer;
 }
 
-@media (max-width: 765px) {
+@media (width <= 765px) {
    .wrapper {
       grid-template:
          "header" auto

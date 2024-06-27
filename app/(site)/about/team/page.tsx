@@ -1,11 +1,6 @@
 import cn from 'classnames';
 import styles from './Team.module.css';
-import { TeamProps } from './Team.props';
 
-export default function Team({ className, ...props }: TeamProps): JSX.Element {
-	return (
-		<div className={cn(styles)} {...props}>
-			Team
-		</div>
-	);
+export default function Team(): JSX.Element {
+	return <div className={cn(styles)}>Team</div>;
 }

@@ -1,15 +1,14 @@
-import { Button, Htag, P, Tag } from '@/components';
+'use client';
+import { Button, Htag, P, Rating, Tag } from '@/components';
 import { Test } from '@/components/Test/Test';
 import { Noto_Sans } from 'next/font/google';
-import { Menu } from './componets/Sidebar/menu';
-import styles from './page.module.css';
+import { useState } from 'react';
 const notoSans900 = Noto_Sans({ subsets: ['latin'], weight: '900' });
 
-export default async function Home() {
-	// const [rating, setRating] = useState<number>(4);
+export default function Home() {
+	const [rating, setRating] = useState<number>(4);
 	return (
-		<main className={styles.main}>
-			<Menu />
+		<>
 			<div>
 				<Htag tag="h1">Курсы по Photoshop </Htag>
 				<Button apperance="primary">Узнать подробнее</Button>
@@ -44,8 +43,8 @@ export default async function Home() {
 					small
 				</Tag>
 				<Test>as</Test>
-				{/* <Rating rating={rating} isEditable setRating={setRating}></Rating> */}
+				<Rating rating={rating} isEditable setRating={setRating}></Rating>
 			</div>
-		</main>
+		</>
 	);
 }
